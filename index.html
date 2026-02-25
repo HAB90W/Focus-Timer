@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofi Focus Room</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div id="timer">25:00</div>
+        
+        <div class="presets">
+            <button onclick="setTime(10)">10m</button>
+            <button onclick="setTime(20)">20m</button>
+            <button onclick="setTime(30)">30m</button>
+            <button onclick="setTime(60)">1h</button>
+            <button onclick="setTime(120)">2h</button>
+            <button onclick="setTime(180)">3h</button>
+            <button onclick="setTime(240)">4h</button>
+        </div>
+
+        <div class="controls">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+
+        <input type="text" id="task-input" placeholder="What are we working on?">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
